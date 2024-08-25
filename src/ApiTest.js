@@ -22,7 +22,10 @@ const ApiTest = () => {
     setError("");
     try {
       const parsedInput = JSON.parse(jsonInput);
-      const res = await axios.post("http://localhost:5000/bfhl", parsedInput);
+      const res = await axios.post(
+        "https://two1bps1194-backend.onrender.com",
+        parsedInput
+      );
       setResponse(res.data);
     } catch (err) {
       setError("Invalid JSON format");
